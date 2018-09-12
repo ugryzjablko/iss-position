@@ -31,8 +31,8 @@ enum OpenNotifyEndpoint: EndpointConfiguration {
     
     func asURLRequest() throws -> URLRequest {
         let baseUrl = try OpenNotifyConstants.API.baseURL.asURL()
+        let url = baseUrl.appendingPathComponent(path)
         
-        let url = baseUrl.appendingPathExtension(path)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         
