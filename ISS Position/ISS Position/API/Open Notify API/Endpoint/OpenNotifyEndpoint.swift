@@ -6,7 +6,7 @@
 //  Copyright © 2018 Marcin Kuświk. All rights reserved.
 //
 
-import Foundation
+import Alamofire
 
 enum OpenNotifyEndpoint: EndpointConfiguration {
     
@@ -32,20 +32,11 @@ enum OpenNotifyEndpoint: EndpointConfiguration {
     func asURLRequest() throws -> URLRequest {
         let baseUrl = try OpenNotifyConstants.API.baseURL.asURL()
         
-        var urlRequest = prepareURLRequest(baseUrl: baseUrl, path: path)
-        urlRequest?.httpMethod = method
+        let url = baseUrl.appendingPathExtension(path)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = method.rawValue
         
         return urlRequest
     }
     
-}
-
-extension OpenNotifyEndpoint {
-    func prepareURLRequest(baseUrl: URL?, path: String?) -> URLRequest? {
-        let url = baseUrl?.appendingPathExtension(path)
-        if let url = url {
-            return URLRequest(url)
-        }
-        return nil
-    }
 }
