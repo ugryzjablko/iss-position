@@ -6,6 +6,7 @@ target 'ISS Position' do
   use_frameworks!
 
   # Pods for ISS Position
+  pod 'Alamofire', '~> 4.7'
 
   target 'ISS PositionTests' do
     inherit! :search_paths
