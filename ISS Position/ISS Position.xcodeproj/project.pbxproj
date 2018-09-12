@@ -17,6 +17,8 @@
 		D30CECCA2149562E0045E92D /* OpenNotifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECC92149562E0045E92D /* OpenNotifyConstants.swift */; };
 		D30CECCF21495EDA0045E92D /* JSONDecoder+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECCE21495EDA0045E92D /* JSONDecoder+Codable.swift */; };
 		D30CECD1214963400045E92D /* APIDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECD0214963400045E92D /* APIDataError.swift */; };
+		D30CECD521496CCE0045E92D /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECD421496CCE0045E92D /* AppController.swift */; };
+		D30CECD821496D140045E92D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECD721496D140045E92D /* RootViewController.swift */; };
 		D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371C1E7214918E500C4F85B /* AppDelegate.swift */; };
 		D371C1ED214918E500C4F85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D371C1EB214918E500C4F85B /* Main.storyboard */; };
 		D371C1EF214918E700C4F85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D371C1EE214918E700C4F85B /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		D30CECC92149562E0045E92D /* OpenNotifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyConstants.swift; sourceTree = "<group>"; };
 		D30CECCE21495EDA0045E92D /* JSONDecoder+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Codable.swift"; sourceTree = "<group>"; };
 		D30CECD0214963400045E92D /* APIDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataError.swift; sourceTree = "<group>"; };
+		D30CECD421496CCE0045E92D /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		D30CECD721496D140045E92D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D371C1E4214918E500C4F85B /* ISS Position.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISS Position.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D371C1E7214918E500C4F85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D371C1EC214918E500C4F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +172,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D30CECD621496CFB0045E92D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D30CECD721496D140045E92D /* RootViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D371C1DB214918E500C4F85B = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +207,7 @@
 			children = (
 				D3D8AC0F2149360600DB1F16 /* API */,
 				D371C217214924F700C4F85B /* App Flow */,
+				D30CECD621496CFB0045E92D /* Controller */,
 				D371C21B2149283A00C4F85B /* View */,
 				D371C2182149277C00C4F85B /* Other Files */,
 				D371C1EE214918E700C4F85B /* Assets.xcassets */,
@@ -225,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				D371C1E7214918E500C4F85B /* AppDelegate.swift */,
+				D30CECD421496CCE0045E92D /* AppController.swift */,
 			);
 			path = "App Flow";
 			sourceTree = "<group>";
@@ -482,6 +496,7 @@
 				D30CECC4214955660045E92D /* EndpointConfiguration.swift in Sources */,
 				D3D8AC1421493D7000DB1F16 /* Astronaut.swift in Sources */,
 				D30CECCF21495EDA0045E92D /* JSONDecoder+Codable.swift in Sources */,
+				D30CECD821496D140045E92D /* RootViewController.swift in Sources */,
 				D30CECB8214942500045E92D /* Astros.swift in Sources */,
 				D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */,
 				D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */,
@@ -489,6 +504,7 @@
 				D30CECC6214955C80045E92D /* OpenNotifyEndpoint.swift in Sources */,
 				D30CECD1214963400045E92D /* APIDataError.swift in Sources */,
 				D30CECCA2149562E0045E92D /* OpenNotifyConstants.swift in Sources */,
+				D30CECD521496CCE0045E92D /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
