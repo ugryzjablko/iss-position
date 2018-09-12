@@ -11,6 +11,12 @@
 		0F7412E773EB116620A782D0 /* Pods_ISS_Position.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EA28D55B6C8A6700B40CD4 /* Pods_ISS_Position.framework */; };
 		71F2D4EC9641A226721BE13D /* Pods_ISS_PositionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CE670CE28EB481B92039D7 /* Pods_ISS_PositionTests.framework */; };
 		D30CECB8214942500045E92D /* Astros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECB7214942500045E92D /* Astros.swift */; };
+		D30CECC1214954CF0045E92D /* OpenNotifyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECC0214954CF0045E92D /* OpenNotifyAPIClient.swift */; };
+		D30CECC4214955660045E92D /* EndpointConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECC3214955660045E92D /* EndpointConfiguration.swift */; };
+		D30CECC6214955C80045E92D /* OpenNotifyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECC5214955C80045E92D /* OpenNotifyEndpoint.swift */; };
+		D30CECCA2149562E0045E92D /* OpenNotifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECC92149562E0045E92D /* OpenNotifyConstants.swift */; };
+		D30CECCF21495EDA0045E92D /* JSONDecoder+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECCE21495EDA0045E92D /* JSONDecoder+Codable.swift */; };
+		D30CECD1214963400045E92D /* APIDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECD0214963400045E92D /* APIDataError.swift */; };
 		D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371C1E7214918E500C4F85B /* AppDelegate.swift */; };
 		D371C1ED214918E500C4F85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D371C1EB214918E500C4F85B /* Main.storyboard */; };
 		D371C1EF214918E700C4F85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D371C1EE214918E700C4F85B /* Assets.xcassets */; };
@@ -49,6 +55,12 @@
 		A9CC91C68E9E3B7D698B8DE9 /* Pods-ISS Position.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.debug.xcconfig"; sourceTree = "<group>"; };
 		AB5F7E99BB97218090D99CAC /* Pods_ISS_PositionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISS_PositionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30CECB7214942500045E92D /* Astros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astros.swift; sourceTree = "<group>"; };
+		D30CECC0214954CF0045E92D /* OpenNotifyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyAPIClient.swift; sourceTree = "<group>"; };
+		D30CECC3214955660045E92D /* EndpointConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointConfiguration.swift; sourceTree = "<group>"; };
+		D30CECC5214955C80045E92D /* OpenNotifyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyEndpoint.swift; sourceTree = "<group>"; };
+		D30CECC92149562E0045E92D /* OpenNotifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyConstants.swift; sourceTree = "<group>"; };
+		D30CECCE21495EDA0045E92D /* JSONDecoder+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Codable.swift"; sourceTree = "<group>"; };
+		D30CECD0214963400045E92D /* APIDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataError.swift; sourceTree = "<group>"; };
 		D371C1E4214918E500C4F85B /* ISS Position.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISS Position.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D371C1E7214918E500C4F85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D371C1EC214918E500C4F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +130,42 @@
 				AB5F7E99BB97218090D99CAC /* Pods_ISS_PositionUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D30CECC2214954E90045E92D /* Open Notify API */ = {
+			isa = PBXGroup;
+			children = (
+				D30CECC8214956170045E92D /* Helper */,
+				D30CECC7214955D50045E92D /* Endpoint */,
+				D3D8AC102149360F00DB1F16 /* Response */,
+				D30CECC0214954CF0045E92D /* OpenNotifyAPIClient.swift */,
+			);
+			path = "Open Notify API";
+			sourceTree = "<group>";
+		};
+		D30CECC7214955D50045E92D /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				D30CECC5214955C80045E92D /* OpenNotifyEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		D30CECC8214956170045E92D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D30CECC92149562E0045E92D /* OpenNotifyConstants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D30CECCB21495E740045E92D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D30CECD0214963400045E92D /* APIDataError.swift */,
+				D30CECCE21495EDA0045E92D /* JSONDecoder+Codable.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D371C1DB214918E500C4F85B = {
@@ -201,7 +249,9 @@
 		D3D8AC0F2149360600DB1F16 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D3D8AC102149360F00DB1F16 /* Response */,
+				D30CECCB21495E740045E92D /* Helper */,
+				D30CECC2214954E90045E92D /* Open Notify API */,
+				D30CECC3214955660045E92D /* EndpointConfiguration.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -428,11 +478,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30CECC1214954CF0045E92D /* OpenNotifyAPIClient.swift in Sources */,
+				D30CECC4214955660045E92D /* EndpointConfiguration.swift in Sources */,
 				D3D8AC1421493D7000DB1F16 /* Astronaut.swift in Sources */,
+				D30CECCF21495EDA0045E92D /* JSONDecoder+Codable.swift in Sources */,
 				D30CECB8214942500045E92D /* Astros.swift in Sources */,
 				D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */,
 				D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */,
 				D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */,
+				D30CECC6214955C80045E92D /* OpenNotifyEndpoint.swift in Sources */,
+				D30CECD1214963400045E92D /* APIDataError.swift in Sources */,
+				D30CECCA2149562E0045E92D /* OpenNotifyConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
