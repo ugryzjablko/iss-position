@@ -10,6 +10,7 @@
 		02F3F375E25CC703BF4BA929 /* Pods_ISS_PositionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F7E99BB97218090D99CAC /* Pods_ISS_PositionUITests.framework */; };
 		0F7412E773EB116620A782D0 /* Pods_ISS_Position.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EA28D55B6C8A6700B40CD4 /* Pods_ISS_Position.framework */; };
 		71F2D4EC9641A226721BE13D /* Pods_ISS_PositionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CE670CE28EB481B92039D7 /* Pods_ISS_PositionTests.framework */; };
+		D30CECB8214942500045E92D /* Astros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CECB7214942500045E92D /* Astros.swift */; };
 		D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371C1E7214918E500C4F85B /* AppDelegate.swift */; };
 		D371C1ED214918E500C4F85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D371C1EB214918E500C4F85B /* Main.storyboard */; };
 		D371C1EF214918E700C4F85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D371C1EE214918E700C4F85B /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 		D371C1FD214918E700C4F85B /* ISS_PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371C1FC214918E700C4F85B /* ISS_PositionTests.swift */; };
 		D371C208214918E700C4F85B /* ISS_PositionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D371C207214918E700C4F85B /* ISS_PositionUITests.swift */; };
 		D371C21A2149279500C4F85B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D371C2192149279500C4F85B /* Podfile */; };
+		D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8AC0B214934A000DB1F16 /* ISSNow.swift */; };
+		D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8AC0D2149351B00DB1F16 /* ISSPosition.swift */; };
+		D3D8AC1421493D7000DB1F16 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8AC1321493D7000DB1F16 /* Astronaut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,7 @@
 		95EA28D55B6C8A6700B40CD4 /* Pods_ISS_Position.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISS_Position.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9CC91C68E9E3B7D698B8DE9 /* Pods-ISS Position.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.debug.xcconfig"; sourceTree = "<group>"; };
 		AB5F7E99BB97218090D99CAC /* Pods_ISS_PositionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISS_PositionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30CECB7214942500045E92D /* Astros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astros.swift; sourceTree = "<group>"; };
 		D371C1E4214918E500C4F85B /* ISS Position.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISS Position.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D371C1E7214918E500C4F85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D371C1EC214918E500C4F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		D371C207214918E700C4F85B /* ISS_PositionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISS_PositionUITests.swift; sourceTree = "<group>"; };
 		D371C209214918E700C4F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D371C2192149279500C4F85B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		D3D8AC0B214934A000DB1F16 /* ISSNow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSNow.swift; sourceTree = "<group>"; };
+		D3D8AC0D2149351B00DB1F16 /* ISSPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSPosition.swift; sourceTree = "<group>"; };
+		D3D8AC1321493D7000DB1F16 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		EF27ABDB0E899105F5DEFADF /* Pods-ISS Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.release.xcconfig"; sourceTree = "<group>"; };
 		F3E15F2CE8A46CD720115784 /* Pods-ISS PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS PositionTests/Pods-ISS PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +145,7 @@
 		D371C1E6214918E500C4F85B /* ISS Position */ = {
 			isa = PBXGroup;
 			children = (
+				D3D8AC0F2149360600DB1F16 /* API */,
 				D371C217214924F700C4F85B /* App Flow */,
 				D371C21B2149283A00C4F85B /* View */,
 				D371C2182149277C00C4F85B /* Other Files */,
@@ -187,6 +196,25 @@
 				D371C1EB214918E500C4F85B /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D3D8AC0F2149360600DB1F16 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D3D8AC102149360F00DB1F16 /* Response */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D3D8AC102149360F00DB1F16 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D3D8AC0B214934A000DB1F16 /* ISSNow.swift */,
+				D3D8AC0D2149351B00DB1F16 /* ISSPosition.swift */,
+				D3D8AC1321493D7000DB1F16 /* Astronaut.swift */,
+				D30CECB7214942500045E92D /* Astros.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,15 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ISS Position-checkManifestLockResult.txt",
 			);
@@ -348,15 +372,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
@@ -370,15 +390,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ISS PositionUITests-checkManifestLockResult.txt",
 			);
@@ -392,15 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ISS PositionTests-checkManifestLockResult.txt",
 			);
@@ -416,6 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D8AC1421493D7000DB1F16 /* Astronaut.swift in Sources */,
+				D30CECB8214942500045E92D /* Astros.swift in Sources */,
+				D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */,
+				D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */,
 				D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
