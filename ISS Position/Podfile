@@ -7,6 +7,7 @@ target 'ISS Position' do
 
   # Pods for ISS Position
   pod 'Alamofire', '~> 4.7'
+  pod 'Mapbox-iOS-SDK', '~> 4.3'
 
   target 'ISS PositionTests' do
     inherit! :search_paths
