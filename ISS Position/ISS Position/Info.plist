@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Shows your location on the map and helps improve OpenStreetMap.</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoidWdyeXpqYWJsa28iLCJhIjoiY2psemM4ZjZ3MXV0eTNxbDhlNjdtN2ZobyJ9.nyk02vBb6pimi5mnizF6Tg
+</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
