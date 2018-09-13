@@ -126,10 +126,10 @@ class RootViewController: UIViewController {
                 subtitle = self.prepareAstronautsString(withAstronatus: self.astronauts)
             }
             if let error = error {
-                subtitle = "There was a problem while checking astronauts on ISS! Error: \(error)"
+                subtitle = "\(NSLocalizedString("RootView.annotation.subtitle", comment: "")): \(error)"
             }
             if let coordinates = self.coordinates {
-                let mapAnnotation = self.prepareMapViewAnnotation(withTitle: "Astronauts on ISS", subtitle: subtitle!, andCoorinates: coordinates)
+                let mapAnnotation = self.prepareMapViewAnnotation(withTitle: NSLocalizedString("RootView.annotation.title", comment: ""), subtitle: subtitle!, andCoorinates: coordinates)
                 self.mapView?.addAnnotation(mapAnnotation)
             }
         }
@@ -156,7 +156,8 @@ class RootViewController: UIViewController {
     
     private func updateStatus(issPosition: ISSNow?) {
         if let position = issPosition {
-            statusLabel?.text = "Current ISS position latitude: \(position.issPosition.latitude), longitude: \(position.issPosition.longitude) at \(position.timestamp.customDateStringFormat())"
+            let formatStatus = NSLocalizedString("RootView.status.template", comment: "")
+            statusLabel?.text = String.localizedStringWithFormat(formatStatus, position.issPosition.latitude, position.issPosition.longitude, position.timestamp.customDateStringFormat())
         }
     }
 }

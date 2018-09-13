@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         guard let window = window else {
-            fatalError("There was a big problem with launching the app!")
+            fatalError(NSLocalizedString("Error.window-error", comment: ""))
         }
         
         let appController = AppController()

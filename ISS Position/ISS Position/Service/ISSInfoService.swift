@@ -17,7 +17,7 @@ final class ISSInfoService {
                 callback(result.value, nil)
             }
             else {
-                callback(nil, ServiceDataError.failure("There was a problem with data!"))
+                callback(nil, ServiceDataError.failure(NSLocalizedString("ISSInfoService.error.corrupted-data", comment: "")))
             }
         }
     }
@@ -28,7 +28,7 @@ final class ISSInfoService {
                 callback(result.value, nil)
             }
             else {
-                callback(nil, ServiceDataError.failure("There was a problem with data!"))
+                callback(nil, ServiceDataError.failure(NSLocalizedString("ISSInfoService.error.corrupted-data", comment: "")))
             }
         }
     }

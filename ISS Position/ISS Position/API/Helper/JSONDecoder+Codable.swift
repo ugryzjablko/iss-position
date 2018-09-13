@@ -16,7 +16,7 @@ extension JSONDecoder {
         }
         
         guard let responseData = response.data else {
-            return .failure(APIDataError.dataError("There was a problem with data!"))
+            return .failure(APIDataError.dataError(NSLocalizedString("API.error.data-problem", comment: "")))
         }
         
         do {

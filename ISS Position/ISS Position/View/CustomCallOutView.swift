@@ -43,7 +43,7 @@ class CustomCallOutView: UIView, MGLCalloutView {
     }
     
     required init?(coder decoder: NSCoder) {
-        fatalError("Not implemented!")
+        fatalError(NSLocalizedString("Global.message.not-implemented", comment: ""))
     }
     
     func setup() {
