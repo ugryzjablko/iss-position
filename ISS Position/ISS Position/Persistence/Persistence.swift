@@ -10,7 +10,7 @@ import Foundation
 
 protocol Persistence {
     
-    static func set(object: Any, forKey key: String)
+    static func set(object: Any?, forKey key: String)
     
     static func getObject(forKey key: String) -> Any?
     

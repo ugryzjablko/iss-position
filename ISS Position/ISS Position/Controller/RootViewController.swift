@@ -11,7 +11,11 @@ import Mapbox
 
 class RootViewController: UIViewController {
     
+    private let persistane: Persistence = PersistenceUserDefaults()
+    
     private let mapViewZoomLevel: Double = 3
+    
+    private var statusLabel: UILabel?
     
     private var mapView: MGLMapView?
     
@@ -29,10 +33,8 @@ class RootViewController: UIViewController {
     
     private var coordinates: CLLocationCoordinate2D? {
         get {
-            if let longitudeString = issPosition?.issPosition.longitude, let latitudeString = issPosition?.issPosition.latitude {
-                let longitude = Double(longitudeString)
-                let latitude = Double(latitudeString)
-                return CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+            if let longitude = issPosition?.issPosition.longitude, let latitude = issPosition?.issPosition.latitude {
+                return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             }
             return nil
         }
@@ -52,6 +54,27 @@ class RootViewController: UIViewController {
         mapView?.styleURL = MGLStyle.satelliteStyleURL
         mapView?.delegate = self
         view.addSubview(mapView!)
+        
+        let statusLabel = UILabel()
+        statusLabel.backgroundColor = UIColor.white
+        statusLabel.alpha = 0.75
+        statusLabel.textColor = UIColor.black
+        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(statusLabel)
+        view.bringSubview(toFront: statusLabel)
+        
+        statusLabel.heightAnchor.constraint(equalToConstant: 30)
+        statusLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        statusLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+    
+        if #available(iOS 11, *) {
+            let guide = view.safeAreaLayoutGuide
+            statusLabel.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0).isActive = true
+        } else {
+            let standardSpacing: CGFloat = 8.0
+            statusLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing).isActive = true
+        }
     }
     
     private func setupData() {
@@ -77,6 +100,7 @@ class RootViewController: UIViewController {
         ISSInfoService.getISSPosition { (result, error) in
             if let result = result {
                 self.issPosition = result
+                ISSInfoService.saveISSPosition(issPosition: result)
             }
         }
     }

@@ -10,13 +10,14 @@ import Foundation
 
 final class ISSInfoService {
     
+    
     static func getISSPosition(callback: @escaping (ISSNow?, Error?) -> Void) {
         OpenNotifyAPIClient.getPosition { (result) in
             if result.isSuccess {
                 callback(result.value, nil)
             }
             else {
-                callback(nil, ServiceDataError.failure("There was some problems with data!"))
+                callback(nil, ServiceDataError.failure("There was a problem with data!"))
             }
         }
     }
@@ -27,7 +28,16 @@ final class ISSInfoService {
                 callback(result.value, nil)
             }
             else {
-                callback(nil, ServiceDataError.failure("There was some problems with data!"))
+                callback(nil, ServiceDataError.failure("There was a problem with data!"))
+            }
+        }
+    }
+    
+    static func saveISSPosition(issPosition: ISSNow?) {
+        if let position = issPosition {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(position) {
+                PersistenceUserDefaults.set(object: encoded, forKey: "issPosition")
             }
         }
     }

@@ -12,8 +12,9 @@ class PersistenceUserDefaults: Persistence {
     
     static let userDefaults = UserDefaults.standard
     
-    static func set(object: Any, forKey key: String) {
-        userDefaults.set(object, forKey: key)
+    static func set(object: Any?, forKey key: String) {
+        //userDefaults.set(object, forKey: key)
+        userDefaults.setValue(object, forKey: key)
     }
     
     static func getObject(forKey key: String) -> Any? {
