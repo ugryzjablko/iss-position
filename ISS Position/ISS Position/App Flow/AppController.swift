@@ -14,7 +14,12 @@ final class AppController {
     
     func presentRootController(withWindow window: UIWindow?) {
         if let appWindow = window {
-            appWindow.rootViewController = rootViewController
+            
+            let rootView = RootViewController()
+            let presenter = RootPresenter(view: rootView, service: ISSInfoService())
+            rootView.presenter = presenter
+            
+            appWindow.rootViewController = rootView
             appWindow.makeKeyAndVisible()
         }
     }

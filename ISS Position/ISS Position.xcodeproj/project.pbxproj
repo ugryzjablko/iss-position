@@ -36,6 +36,9 @@
 		D3E564A1214A7BE200AB7BD9 /* PersistenceUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */; };
 		D3E564A9214A978E00AB7BD9 /* Date+CustomDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564A8214A978E00AB7BD9 /* Date+CustomDateFormat.swift */; };
 		D3E564AE214A9E8E00AB7BD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3E564B0214A9E8E00AB7BD9 /* Localizable.strings */; };
+		D3E564B2214AAC0B00AB7BD9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564B1214AAC0B00AB7BD9 /* RootView.swift */; };
+		D3E564B4214AAD7900AB7BD9 /* RootViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564B3214AAD7900AB7BD9 /* RootViewPresenter.swift */; };
+		D3E564B6214AAE5300AB7BD9 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564B5214AAE5300AB7BD9 /* RootPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		D3E564A8214A978E00AB7BD9 /* Date+CustomDateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomDateFormat.swift"; sourceTree = "<group>"; };
 		D3E564AB214A9DBC00AB7BD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3E564AF214A9E8E00AB7BD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D3E564B1214AAC0B00AB7BD9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D3E564B3214AAD7900AB7BD9 /* RootViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewPresenter.swift; sourceTree = "<group>"; };
+		D3E564B5214AAE5300AB7BD9 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		EF27ABDB0E899105F5DEFADF /* Pods-ISS Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.release.xcconfig"; sourceTree = "<group>"; };
 		F3E15F2CE8A46CD720115784 /* Pods-ISS PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS PositionTests/Pods-ISS PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,14 +192,6 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		D30CECD621496CFB0045E92D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D30CECD721496D140045E92D /* RootViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		D30CECDA214974110045E92D /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,16 +234,16 @@
 		D371C1E6214918E500C4F85B /* ISS Position */ = {
 			isa = PBXGroup;
 			children = (
-				D3E5649D214A7A2400AB7BD9 /* Persistence */,
-				D3E5649C214A786900AB7BD9 /* Helper */,
 				D3D8AC0F2149360600DB1F16 /* API */,
 				D371C217214924F700C4F85B /* App Flow */,
-				D30CECD621496CFB0045E92D /* Controller */,
+				D3E5649C214A786900AB7BD9 /* Helper */,
+				D3E5649D214A7A2400AB7BD9 /* Persistence */,
+				D3C757FB214AF1EC005FFE22 /* Presentation */,
 				D30CECDA214974110045E92D /* Service */,
 				D371C21B2149283A00C4F85B /* View */,
 				D371C2182149277C00C4F85B /* Other Files */,
-				D371C1EE214918E700C4F85B /* Assets.xcassets */,
 				D371C1F3214918E700C4F85B /* Info.plist */,
+				D371C1EE214918E700C4F85B /* Assets.xcassets */,
 			);
 			path = "ISS Position";
 			sourceTree = "<group>";
@@ -291,6 +289,33 @@
 			children = (
 				D371C1F0214918E700C4F85B /* LaunchScreen.storyboard */,
 				D31477012149BA06009B7DD2 /* CustomCallOutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3C757FB214AF1EC005FFE22 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D3C757FD214AF221005FFE22 /* View */,
+				D3C757FC214AF209005FFE22 /* Presenter */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D3C757FC214AF209005FFE22 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D3E564B3214AAD7900AB7BD9 /* RootViewPresenter.swift */,
+				D3E564B5214AAE5300AB7BD9 /* RootPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D3C757FD214AF221005FFE22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D30CECD721496D140045E92D /* RootViewController.swift */,
+				D3E564B1214AAC0B00AB7BD9 /* RootView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -554,12 +579,14 @@
 				D30CECC4214955660045E92D /* EndpointConfiguration.swift in Sources */,
 				D3D8AC1421493D7000DB1F16 /* Astronaut.swift in Sources */,
 				D30CECCF21495EDA0045E92D /* JSONDecoder+Codable.swift in Sources */,
+				D3E564B4214AAD7900AB7BD9 /* RootViewPresenter.swift in Sources */,
 				D30CECD821496D140045E92D /* RootViewController.swift in Sources */,
 				D30CECB8214942500045E92D /* Astros.swift in Sources */,
 				D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */,
 				D30CECDF214977B80045E92D /* ServiceDataError.swift in Sources */,
 				D31477052149C746009B7DD2 /* ScheduledTaskManager.swift in Sources */,
 				D3E5649F214A7A8200AB7BD9 /* Persistence.swift in Sources */,
+				D3E564B2214AAC0B00AB7BD9 /* RootView.swift in Sources */,
 				D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */,
 				D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */,
 				D30CECDC2149745D0045E92D /* ISSInfoService.swift in Sources */,
@@ -569,6 +596,7 @@
 				D30CECD1214963400045E92D /* APIDataError.swift in Sources */,
 				D30CECCA2149562E0045E92D /* OpenNotifyConstants.swift in Sources */,
 				D30CECD521496CCE0045E92D /* AppController.swift in Sources */,
+				D3E564B6214AAE5300AB7BD9 /* RootPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
