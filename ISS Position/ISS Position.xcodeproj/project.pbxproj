@@ -35,6 +35,7 @@
 		D3E5649F214A7A8200AB7BD9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5649E214A7A8200AB7BD9 /* Persistence.swift */; };
 		D3E564A1214A7BE200AB7BD9 /* PersistenceUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */; };
 		D3E564A9214A978E00AB7BD9 /* Date+CustomDateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564A8214A978E00AB7BD9 /* Date+CustomDateFormat.swift */; };
+		D3E564AE214A9E8E00AB7BD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3E564B0214A9E8E00AB7BD9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUserDefaults.swift; sourceTree = "<group>"; };
 		D3E564A8214A978E00AB7BD9 /* Date+CustomDateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomDateFormat.swift"; sourceTree = "<group>"; };
 		D3E564AB214A9DBC00AB7BD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3E564AF214A9E8E00AB7BD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF27ABDB0E899105F5DEFADF /* Pods-ISS Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.release.xcconfig"; sourceTree = "<group>"; };
 		F3E15F2CE8A46CD720115784 /* Pods-ISS PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS PositionTests/Pods-ISS PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -278,6 +280,7 @@
 		D371C2182149277C00C4F85B /* Other Files */ = {
 			isa = PBXGroup;
 			children = (
+				D3E564B0214A9E8E00AB7BD9 /* Localizable.strings */,
 				D371C2192149279500C4F85B /* Podfile */,
 			);
 			path = "Other Files";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D371C1F2214918E700C4F85B /* LaunchScreen.storyboard in Resources */,
+				D3E564AE214A9E8E00AB7BD9 /* Localizable.strings in Resources */,
 				D371C1EF214918E700C4F85B /* Assets.xcassets in Resources */,
 				D371C21A2149279500C4F85B /* Podfile in Resources */,
 			);
@@ -606,6 +610,14 @@
 				D3E564AB214A9DBC00AB7BD9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D3E564B0214A9E8E00AB7BD9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3E564AF214A9E8E00AB7BD9 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

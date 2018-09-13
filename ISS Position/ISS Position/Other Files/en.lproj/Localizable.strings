@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  ISS Position
+
+  Created by Marcin Kuswik on 13.09.2018.
+  Copyright © 2018 Marcin Kuświk. All rights reserved.
+*/
+
+/********* Global *********/
+
+"Global.message.not-implemented" = "Not implemented!";
+
+
+/********* API *********/
+
+"API.error.data-problem" = "There was a problem with data!";
+
+
+/********* AppDelegate *********/
+
+"Error.window-error" = "There was a big problem with launching the app!";
+
+
+/********* RootViewController *********/
+
+"RootView.annotation.title" = "Astronauts on ISS";
+
+"RootView.annotation.subtitle" = "There was a problem while checking astronauts on ISS!";
+
+"RootView.status.template" = "Current ISS position latitude: %f, longitude: %f at %@";
+
+
+/********* ISSInfoService *********/
+
+"ISSInfoService.error.corrupted-data" = "There was a problem with data!";
