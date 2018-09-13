@@ -10,7 +10,7 @@ import Foundation
 
 struct ISSNow: Codable {
     let message: String
-    let issPosition: [ISSPosition]
+    let issPosition: ISSPosition
     let timestamp: UInt
 }
 
