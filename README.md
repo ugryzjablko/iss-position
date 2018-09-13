@@ -9,7 +9,7 @@ ISS LOCALIZER is an open source app for tracking ISS on map. It uses Mapbox SDK 
 
 ## Configuration
 
-All you have to do to build & run ISS LOCALIZER is to follow 9 simple steps:
+All you have to do to build & run ISS LOCALIZER is to follow 4 simple steps:
 
 1. Clone project `git clone https://github.com/ugryzjablko/iss-position.git`.
 2. Create account at https://www.mapbox.com/signup/ and get your own access token, for demo purpouse this repo contains my own access token, be my guest and use it. If you wish to change it, go to Info.plist and update value for MGLMapboxAccessToken key.
