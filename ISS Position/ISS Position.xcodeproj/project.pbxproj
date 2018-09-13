@@ -32,6 +32,8 @@
 		D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8AC0B214934A000DB1F16 /* ISSNow.swift */; };
 		D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8AC0D2149351B00DB1F16 /* ISSPosition.swift */; };
 		D3D8AC1421493D7000DB1F16 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8AC1321493D7000DB1F16 /* Astronaut.swift */; };
+		D3E5649F214A7A8200AB7BD9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5649E214A7A8200AB7BD9 /* Persistence.swift */; };
+		D3E564A1214A7BE200AB7BD9 /* PersistenceUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		D3D8AC0B214934A000DB1F16 /* ISSNow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSNow.swift; sourceTree = "<group>"; };
 		D3D8AC0D2149351B00DB1F16 /* ISSPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSPosition.swift; sourceTree = "<group>"; };
 		D3D8AC1321493D7000DB1F16 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		D3E5649E214A7A8200AB7BD9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUserDefaults.swift; sourceTree = "<group>"; };
 		EF27ABDB0E899105F5DEFADF /* Pods-ISS Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.release.xcconfig"; sourceTree = "<group>"; };
 		F3E15F2CE8A46CD720115784 /* Pods-ISS PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS PositionTests/Pods-ISS PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +232,7 @@
 		D371C1E6214918E500C4F85B /* ISS Position */ = {
 			isa = PBXGroup;
 			children = (
+				D3E5649D214A7A2400AB7BD9 /* Persistence */,
 				D3E5649C214A786900AB7BD9 /* Helper */,
 				D3D8AC0F2149360600DB1F16 /* API */,
 				D371C217214924F700C4F85B /* App Flow */,
@@ -312,6 +317,15 @@
 				D31477042149C746009B7DD2 /* ScheduledTaskManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		D3E5649D214A7A2400AB7BD9 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				D3E5649E214A7A8200AB7BD9 /* Persistence.swift */,
+				D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,10 +551,12 @@
 				D3D8AC0C214934A000DB1F16 /* ISSNow.swift in Sources */,
 				D30CECDF214977B80045E92D /* ServiceDataError.swift in Sources */,
 				D31477052149C746009B7DD2 /* ScheduledTaskManager.swift in Sources */,
+				D3E5649F214A7A8200AB7BD9 /* Persistence.swift in Sources */,
 				D3D8AC0E2149351B00DB1F16 /* ISSPosition.swift in Sources */,
 				D371C1E8214918E500C4F85B /* AppDelegate.swift in Sources */,
 				D30CECDC2149745D0045E92D /* ISSInfoService.swift in Sources */,
 				D30CECC6214955C80045E92D /* OpenNotifyEndpoint.swift in Sources */,
+				D3E564A1214A7BE200AB7BD9 /* PersistenceUserDefaults.swift in Sources */,
 				D31477022149BA06009B7DD2 /* CustomCallOutView.swift in Sources */,
 				D30CECD1214963400045E92D /* APIDataError.swift in Sources */,
 				D30CECCA2149562E0045E92D /* OpenNotifyConstants.swift in Sources */,
