@@ -9,6 +9,15 @@
 import Foundation
 
 struct ISSPosition: Codable {
-    let latitude: String
-    let longitude: String
+    let latitude: Double
+    let longitude: Double
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        let latitudeString = try values.decode(String.self, forKey: .latitude)
+        let longitudeString = try values.decode(String.self, forKey: .longitude)
+        latitude = Double(latitudeString) ?? 0
+        longitude = Double(longitudeString) ?? 0
+    }
+    
 }
