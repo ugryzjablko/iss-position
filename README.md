@@ -2,6 +2,8 @@
 
 ISS LOCALIZER is an open source app for tracking ISS on map. It uses Mapbox SDK for representing current position on map. Position is updating every 5 seconds and it's represented by pin on map. By clicking on that pin you can show annotation with list of current astronauts residing on ISS.
 
+![](https://github.com/ugryzjablko/iss-position/blob/master/ISS%20Position/ISS%20Position/Assets.xcassets/AppIcon.appiconset/app_store.png)
+
 ## Tools & requirements
 
 * Xcode 9 with iOS 10.0+ SDK
