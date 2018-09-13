@@ -28,8 +28,8 @@
                                             <constraint firstAttribute="width" constant="240" id="lbp-zS-331"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISS Localizator" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThG-P9-qxs">
-                                        <rect key="frame" x="17.666666666666671" y="256" width="205.33333333333331" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISS LOCALIZER" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThG-P9-qxs">
+                                        <rect key="frame" x="9.3333333333333286" y="256" width="223" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="uZK-fV-MUq"/>
                                         </constraints>
