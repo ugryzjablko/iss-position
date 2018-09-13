@@ -12,10 +12,11 @@ final class OpenNotifyAPIClient {
     
     @discardableResult
     private static func request<T:Decodable>(endpoint:EndpointConfiguration, completion:@escaping (Result<T>)->Void) -> DataRequest {
-        return Alamofire.request(endpoint).responseData(completionHandler: { (response) in
+        return Alamofire.request(endpoint).responseData(completionHandler: {
+            (response) in
             let decoder = JSONDecoder()
             let result: Result<T> = decoder.decodeResponse(from: response)
-            return completion(result)
+            completion(result)
         })
     }
     
