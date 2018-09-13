@@ -10,8 +10,13 @@ import Foundation
 
 final class ISSInfoService {
     
+    let persistence: PersistenceUserDefaults
     
-    static func getISSPosition(callback: @escaping (ISSNow?, Error?) -> Void) {
+    init() {
+        persistence = PersistenceUserDefaults()
+    }
+    
+    func getISSPosition(callback: @escaping (ISSNow?, Error?) -> Void) {
         OpenNotifyAPIClient.getPosition { (result) in
             if result.isSuccess {
                 callback(result.value, nil)
@@ -22,7 +27,7 @@ final class ISSInfoService {
         }
     }
     
-    static func getISSAstronauts(callback: @escaping (Astros?, Error?) -> Void) {
+    func getISSAstronauts(callback: @escaping (Astros?, Error?) -> Void) {
         OpenNotifyAPIClient.getAstronauts { (result) in
             if result.isSuccess {
                 callback(result.value, nil)
@@ -33,11 +38,11 @@ final class ISSInfoService {
         }
     }
     
-    static func saveISSPosition(issPosition: ISSNow?) {
+    func saveISSPosition(issPosition: ISSNow?) {
         if let position = issPosition {
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(position) {
-                PersistenceUserDefaults.set(object: encoded, forKey: "issPosition")
+                persistence.set(object: encoded, forKey: "issPosition")
             }
         }
     }
