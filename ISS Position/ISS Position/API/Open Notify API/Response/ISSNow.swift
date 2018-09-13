@@ -11,7 +11,7 @@ import Foundation
 struct ISSNow: Codable {
     let message: String
     let issPosition: ISSPosition
-    let timestamp: UInt
+    let timestamp: Date
 }
 
 extension ISSNow {

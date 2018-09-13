@@ -11,17 +11,19 @@ import Alamofire
 final class OpenNotifyAPIClient {
     
     @discardableResult
-    private static func request<T:Decodable>(endpoint:EndpointConfiguration, completion:@escaping (Result<T>)->Void) -> DataRequest {
+    private static func request<T:Decodable>(endpoint:EndpointConfiguration, decoder aDecoder: JSONDecoder = JSONDecoder(), completion:@escaping (Result<T>)->Void) -> DataRequest {
         return Alamofire.request(endpoint).responseData(completionHandler: {
             (response) in
-            let decoder = JSONDecoder()
+            let decoder = aDecoder
             let result: Result<T> = decoder.decodeResponse(from: response)
             completion(result)
         })
     }
     
     static func getPosition(completion: @escaping (Result<ISSNow>) -> Void) {
-        request(endpoint: OpenNotifyEndpoint.position, completion: completion)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        request(endpoint: OpenNotifyEndpoint.position, decoder: decoder, completion: completion)
     }
     
     static func getAstronauts(completion: @escaping (Result<Astros>) -> Void) {
