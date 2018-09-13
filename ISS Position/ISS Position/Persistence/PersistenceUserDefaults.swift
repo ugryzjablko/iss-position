@@ -10,13 +10,13 @@ import Foundation
 
 class PersistenceUserDefaults: Persistence {
     
-    static let userDefaults = UserDefaults.standard
+    let userDefaults = UserDefaults.standard
     
-    static func set(object: Any?, forKey key: String) {
+    func set(object: Any?, forKey key: String) {
         userDefaults.setValue(object, forKey: key)
     }
     
-    static func getObject(forKey key: String) -> Any? {
+    func getObject(forKey key: String) -> Any? {
         return userDefaults.object(forKey:key)
     }
     
