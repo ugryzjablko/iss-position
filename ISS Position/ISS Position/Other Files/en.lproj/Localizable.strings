@@ -33,3 +33,8 @@
 /********* ISSInfoService *********/
 
 "ISSInfoService.error.corrupted-data" = "There was a problem with data!";
+
+
+/********* RootPresenter *********/
+
+"RootPresenter.status-default-message" = "Houston We have a problem! Currently no status available.";
