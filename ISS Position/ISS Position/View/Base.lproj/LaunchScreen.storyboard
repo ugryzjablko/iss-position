@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +15,45 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghs-NK-NwR">
+                                <rect key="frame" x="87" y="212" width="240" height="312"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-station" translatesAutoresizingMaskIntoConstraints="NO" id="pzk-Ql-LcW">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="Vnk-lw-WnQ"/>
+                                            <constraint firstAttribute="width" constant="240" id="lbp-zS-331"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISS Localizator" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThG-P9-qxs">
+                                        <rect key="frame" x="17.666666666666671" y="256" width="205.33333333333331" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="uZK-fV-MUq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <color key="textColor" red="0.98431372549999996" green="0.36470588240000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pzk-Ql-LcW" firstAttribute="top" secondItem="Ghs-NK-NwR" secondAttribute="top" id="5oq-wy-O37"/>
+                                    <constraint firstItem="pzk-Ql-LcW" firstAttribute="leading" secondItem="Ghs-NK-NwR" secondAttribute="leading" id="Ccy-CD-5DI"/>
+                                    <constraint firstAttribute="trailing" secondItem="pzk-Ql-LcW" secondAttribute="trailing" id="TTi-cK-by5"/>
+                                    <constraint firstAttribute="bottom" secondItem="ThG-P9-qxs" secondAttribute="bottom" constant="16" id="Uk1-SF-Sea"/>
+                                    <constraint firstItem="ThG-P9-qxs" firstAttribute="top" secondItem="pzk-Ql-LcW" secondAttribute="bottom" constant="16" id="Zft-Ke-WuP"/>
+                                    <constraint firstItem="ThG-P9-qxs" firstAttribute="centerX" secondItem="Ghs-NK-NwR" secondAttribute="centerX" id="dgZ-zL-ChU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ghs-NK-NwR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2d6-yG-mun"/>
+                            <constraint firstItem="Ghs-NK-NwR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Sry-A6-JIe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +62,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="space-station" width="256" height="256"/>
+    </resources>
 </document>
