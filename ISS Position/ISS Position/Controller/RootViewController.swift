@@ -55,25 +55,27 @@ class RootViewController: UIViewController {
         mapView?.delegate = self
         view.addSubview(mapView!)
         
-        let statusLabel = UILabel()
-        statusLabel.backgroundColor = UIColor.white
-        statusLabel.alpha = 0.75
-        statusLabel.textColor = UIColor.black
-        statusLabel.translatesAutoresizingMaskIntoConstraints = false
+        statusLabel = UILabel()
+        statusLabel?.backgroundColor = UIColor.white
+        statusLabel?.alpha = 0.75
+        statusLabel?.textColor = UIColor.black
+        statusLabel?.translatesAutoresizingMaskIntoConstraints = false
+        statusLabel?.numberOfLines = 0
+        statusLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        view.addSubview(statusLabel)
-        view.bringSubview(toFront: statusLabel)
+        view.addSubview(statusLabel!)
+        view.bringSubview(toFront: statusLabel!)
         
-        statusLabel.heightAnchor.constraint(equalToConstant: 30)
-        statusLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        statusLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        statusLabel?.heightAnchor.constraint(equalToConstant: 30)
+        statusLabel?.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        statusLabel?.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
     
         if #available(iOS 11, *) {
             let guide = view.safeAreaLayoutGuide
-            statusLabel.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0).isActive = true
+            statusLabel?.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0).isActive = true
         } else {
             let standardSpacing: CGFloat = 8.0
-            statusLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing).isActive = true
+            statusLabel?.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing).isActive = true
         }
     }
     
@@ -113,6 +115,7 @@ class RootViewController: UIViewController {
             updateMapViewCenter(withCoordinates: coordinates)
         }
         getAstronauts()
+        updateStatus(issPosition: issPosition)
     }
     
     private func getAstronauts() {
@@ -151,6 +154,11 @@ class RootViewController: UIViewController {
         self.mapView?.setCenter(coordinates, zoomLevel: mapViewZoomLevel, animated: true)
     }
     
+    private func updateStatus(issPosition: ISSNow?) {
+        if let position = issPosition {
+            statusLabel?.text = "Current ISS position latitude: \(position.issPosition.latitude), longitude: \(position.issPosition.longitude) at \(position.timestamp.customDateStringFormat())"
+        }
+    }
 }
 
 extension RootViewController: MGLMapViewDelegate, ScheduledTaskDelegate {
