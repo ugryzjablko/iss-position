@@ -78,7 +78,6 @@
 		D371C1E4214918E500C4F85B /* ISS Position.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISS Position.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D371C1E7214918E500C4F85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D371C1EE214918E700C4F85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D371C1F1214918E700C4F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D371C1F3214918E700C4F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D371C1F8214918E700C4F85B /* ISS PositionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ISS PositionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D371C1FC214918E700C4F85B /* ISS_PositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISS_PositionTests.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		D3E5649E214A7A8200AB7BD9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D3E564A0214A7BE200AB7BD9 /* PersistenceUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUserDefaults.swift; sourceTree = "<group>"; };
 		D3E564A8214A978E00AB7BD9 /* Date+CustomDateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomDateFormat.swift"; sourceTree = "<group>"; };
+		D3E564AB214A9DBC00AB7BD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF27ABDB0E899105F5DEFADF /* Pods-ISS Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISS Position/Pods-ISS Position.release.xcconfig"; sourceTree = "<group>"; };
 		F3E15F2CE8A46CD720115784 /* Pods-ISS PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISS PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISS PositionTests/Pods-ISS PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -603,7 +603,7 @@
 		D371C1F0214918E700C4F85B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D371C1F1214918E700C4F85B /* Base */,
+				D3E564AB214A9DBC00AB7BD9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -662,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -716,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
