@@ -16,7 +16,9 @@ final class OpenNotifyAPIClient {
             (response) in
             let decoder = aDecoder
             let result: Result<T> = decoder.decodeResponse(from: response)
-            completion(result)
+            DispatchQueue.main.async {
+                completion(result)
+            }
         })
     }
     
