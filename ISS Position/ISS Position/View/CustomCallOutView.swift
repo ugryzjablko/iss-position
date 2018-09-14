@@ -31,6 +31,7 @@ class CustomCallOutView: UIView, MGLCalloutView {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 10.0)
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.isEditable = false
         return textView
     }()
     
